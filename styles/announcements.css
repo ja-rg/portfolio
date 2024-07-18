@@ -1,0 +1,93 @@
+aside#announcements {
+    background-color: hsla(var(--accent-colour-h), var(--accent-colour-s), var(--accent-colour-l), .3);
+
+    height: calc(90dvh - var(--navigation-height));
+    width: clamp(5rem, 80vw - 5rem, 30rem);
+
+    padding: var(--standard-size);
+    border-radius: var(--standard-size);
+    border: none;
+    backdrop-filter: blur(.8em);
+    box-shadow: 0 0 var(--standard-size) var(--accent-colour),
+        inset 0 0 var(--standard-size) var(--light-accent-colour);
+    
+    overflow: hidden;
+
+    color: var(--accent-colour);
+}
+
+aside#announcements:popover-open {
+    display: grid;
+    place-items: center;
+
+    margin-inline-end: var(--standard-size);
+    margin-block-end: var(--standard-size);
+}
+
+button[popovertarget="announcements"] {
+    position: fixed;
+    inset-inline-end: var(--standard-size);
+    inset-block-end: var(--standard-size);
+
+    font-size: var(--standard-size);
+    padding: var(--standard-size);
+    border-radius: var(--standard-size);
+}
+
+button[popovertarget="announcements"][popovertargetaction="hide"] {
+    inset-inline-end: 0;
+    inset-block-end: 0;
+}
+
+aside#announcements::before,
+aside#announcements::after {
+    content: '';
+    position: absolute;
+    width: calc(var(--standard-size) * 12);
+    height: calc(var(--standard-size) * 12);
+    border-radius: 50%;
+    background: var(--light-accent-colour);
+    filter: blur(calc(var(--standard-size) * 50));
+
+    justify-content: center;
+    align-content: center;
+}
+
+aside#announcements::before {
+    inset-inline-start: calc(-5 * var(--standard-size));
+}
+aside#announcements::after {
+    inset-inline-end: calc(-1 * var(--standard-size));
+}
+
+
+.glass-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    color: var(--accent-colour);
+    position: absolute;
+    inset-inline-start: 0;
+    line-height: 0;
+
+    li:first-child {
+        border-start-end-radius: var(--standard-size);
+    }
+
+    li:last-child {
+        border-end-end-radius: var(--standard-size);
+    }
+}
+
+.glass-list li {
+    padding: var(--standard-size);
+    background: var(--background-colour-50);
+    text-align: center;
+
+    &:hover {
+        background-color: var(--background-colour);
+        transition: ease 200ms all;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap');
+@import url('accents.css');
+@import url('hero.css');
+@import url('search.css');
+@import url('announcements.css');
+@import url('content.css');
+@import url('skills.css');
+
+:root {
+    --background-colour-h: 176;
+    --background-colour-s: 59%;
+    --background-colour-l: 94%;
+    --background-colour: hsla(var(--background-colour-h), var(--background-colour-s), var(--background-colour-l));
+    --background-colour-20: hsla(var(--background-colour-h), var(--background-colour-s), var(--background-colour-l), .2);
+    --background-colour-50: hsla(var(--background-colour-h), var(--background-colour-s), var(--background-colour-l), .5);
+    --background-colour-70: hsla(var(--background-colour-h), var(--background-colour-s), var(--background-colour-l), .7);
+
+    --accent-colour-h: 176;
+    --accent-colour-s: 27%;
+    --accent-colour-l: 47%;
+    --accent-colour: hsla(var(--accent-colour-h), var(--accent-colour-s), var(--accent-colour-l));
+    --accent-colour-20: hsla(var(--accent-colour-h), var(--accent-colour-s), var(--accent-colour-l), .2);
+    --accent-colour-50: hsla(var(--accent-colour-h), var(--accent-colour-s), var(--accent-colour-l), .5);
+    --accent-colour-70: hsla(var(--accent-colour-h), var(--accent-colour-s), var(--accent-colour-l), .7);
+
+
+    --light-accent-colour-h: 175;
+    --light-accent-colour-s: 79%;
+    --light-accent-colour-l: 87%;
+    --light-accent-colour: hsla(var(--light-accent-colour-h), var(--light-accent-colour-s), var(--light-accent-colour-l));
+    --light-accent-colour-20: hsla(var(--light-accent-colour-h), var(--light-accent-colour-s), var(--light-accent-colour-l), .2);
+    --light-accent-colour-50: hsla(var(--light-accent-colour-h), var(--light-accent-colour-s), var(--light-accent-colour-l), .5);
+    --light-accent-colour-70: hsla(var(--light-accent-colour-h), var(--light-accent-colour-s), var(--light-accent-colour-l), .7);
+
+    --navigation-height: 20dvh;
+    --standard-size: 1.3rem;
+    --standard-size-n1: calc(var(--standard-size) * -1);
+    --standard-size-2: calc(var(--standard-size) * 2);
+    --standard-size-5: calc(var(--standard-size) * 5);
+    --standard-size-7: calc(var(--standard-size) * 7);
+    --standard-size-12: calc(var(--standard-size) * 12);
+}
+
+body {
+    background-color: var(--background-colour);
+    font-family: "Palanquin", sans-serif;
+    font-size: var(--standard-size);
+    color: var(--accent-colour);
+    margin: 0;
+    line-height: 1.7rem;
+}
+
+button {
+    display: grid;
+    place-items: center;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    height: var(--standard-size);
+    margin-block-end: 0;
+
+}

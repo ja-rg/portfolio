@@ -1,0 +1,29 @@
+.tinted {
+    background: var(--light-accent-colour);
+    color: var(--accent-colour);
+    padding: .7rem;
+    place-content: center;
+    text-align: center;
+    aspect-ratio: 1;
+}
+
+.light-tinted {
+    background: var(--background-colour);
+    color: var(--accent-colour);
+    padding: .7rem;
+    place-content: center;
+    text-align: center;
+    aspect-ratio: 1;
+}
+
+button.tinted {
+    background: var(--accent-colour);
+    color: var(--background-colour);
+    border: none;
+    cursor: pointer;
+}
+
+button.light-tinted {
+    border: none;
+    cursor: pointer;
+}

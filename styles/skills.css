@@ -1,0 +1,83 @@
+#skills {
+    display: grid;
+    width: 70%;
+
+    gap: var(--standard-size);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    background-image: url('/content/abstract-bg-1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .element {
+        background-color: hsla(var(--accent-colour-h), var(--accent-colour-s), var(--accent-colour-l), .7);
+        box-shadow: 0 0 var(--standard-size) var(--accent-colour),
+            inset 0 0 var(--standard-size) var(--light-accent-colour);
+        color: var(--background-colour);
+
+        border-radius: var(--standard-size);
+        padding: var(--standard-size);
+        backdrop-filter: blur(.8em);
+
+        transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        transform-style: preserve-3d;
+        overflow: hidden;
+
+        &:hover {
+            transform: rotateY(10deg) rotateX(10deg);
+        }
+
+        i {
+            font-size: calc(2 * var(--standard-size));
+        }
+
+        .title {
+            margin: 0;
+            position: relative;
+
+            &::before, &::after {
+                content: "";
+                position: absolute;
+                width: var(--standard-size-7);
+                height: var(--standard-size-7);
+                background-color: var(--accent-colour);
+                filter: blur(.8rem);
+                border-radius: 50%;
+
+                z-index: -1;
+            }
+            
+            &::before {
+                transform: translateY(var(--standard-size-n1));
+            }
+            
+            &::after {
+                inset-inline-start: var(--standard-size-5);
+                inset-block-start: 0;
+            }
+        }
+    }
+
+    .ultra {
+        grid-row-end: span 2;
+        grid-column-end: span 2;
+    }
+
+    .super {
+        grid-column-end: span 2;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #skills {
+        width: 90dvw;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        .super, .ultra {
+            grid-column-end: span 1;
+            grid-row-end: span 1;
+        }
+    }
+}
